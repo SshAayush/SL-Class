@@ -4,7 +4,7 @@ include('dbconn.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$query = "INSERT INTO login (username, passowrd) VALUES (:users, :pass)";
+$query = "INSERT INTO login (username, password) VALUES (:users, :pass)";
 $stmt = $pdo->prepare($query);
 $stmt->bindParam(':users', $username);
 $stmt->bindParam(':pass', $password);
