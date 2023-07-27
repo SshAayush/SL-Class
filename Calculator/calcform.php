@@ -1,3 +1,6 @@
+<?php
+    @$value = $_GET['result'];
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +17,10 @@
             <input type="number" name="num2" placeholder="Enter number 2"><br>
             <input type="submit" value="+" name="cal">
             <input type="submit" value="-" name="cal">
+            <br>
+            <br>
+            <label for="result">Result:</label>
+            <input type="number" name="result" id="result" placeholder="<?php echo $value ?> "readonly>
         </form>
-        <script src="" async defer></script>
     </body>
 </html>

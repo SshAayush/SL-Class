@@ -1,4 +1,5 @@
 <?php
+
 $num1 = $_POST['num1'];
 $num2 = $_POST['num2'];
 $cal = $_POST['cal'];
@@ -6,7 +7,7 @@ $cal = $_POST['cal'];
 switch($cal){
     case "+":
         $value = $num1 + $num2;
-        break;
+       break;
     
     case "-":
         $value = $num1 - $num2;
@@ -17,5 +18,5 @@ switch($cal){
         break;
 
 }
-    echo "The value is: ".$value;
+    header("location:calcform.php?result=$value");
 ?>
