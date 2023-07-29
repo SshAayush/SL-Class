@@ -1,17 +1,16 @@
 <?php
 //array in php
-// $array = array(name=>'a','b','c','d','e');
 include("dbconn.php");
 $query = ('SELECT * FROM login');
 $stmt = $pdo->prepare($query);
 $stmt -> execute();
 
 $value = $stmt->fetchAll(PDO::FETCH_ASSOC);
-var_dump($value);
+// var_dump($value);
 // $value = $stmt->fetch(PDO::FETCH_COLUMN);
 
-// foreach($value as $key => $value){
-//     echo $value['username']."<br>";
-//     // echo $value['passowrd']."<br>";
-// }
+foreach($value as $item){
+    echo $item['username']."<br>";
+    echo $item['password']."<br>";
+}
 ?>
